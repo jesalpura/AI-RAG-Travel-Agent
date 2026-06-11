@@ -16,7 +16,10 @@ st.title("📊 Global Wanderer Analytics")
 # =================================
 
 stats = db.get_stats()
-st.write(db.get_stats())
+st.write("Live Stats", db.get_stats())
+
+st.write("Last 5 Messages")
+st.write(db.get_messages(5))
 c1, c2, c3, c4 = st.columns(4)
 
 c1.metric("Sessions", stats["sessions"])

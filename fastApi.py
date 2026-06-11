@@ -115,3 +115,5 @@ async def upload_pdf(file: UploadFile = File(...)) -> dict[str, str]:
 def rebuild_db(background_tasks: BackgroundTasks) -> dict[str, str]:
     background_tasks.add_task(build_vector_db)
     return {"status": "rebuilding in background"}
+
+print(db.get_stats())
