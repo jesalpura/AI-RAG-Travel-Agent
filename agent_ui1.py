@@ -350,11 +350,11 @@ if prompt := st.chat_input("Where do you want to go? (e.g. plan a trip to Goa, f
                 err = str(e)
                 st.error(f"❌ Something went wrong: {err}")
                 if "GOOGLE_API_KEY" in err or "API_KEY" in err or "api key" in err.lower():
-                    st.warning("🔑 **API key issue** — check that `GOOGLE_API_KEY` is set correctly in your `.env` file.")
+                    st.warning("🔑 **API key issue** — check that `GOOGLE_API_KEY` is set in your Streamlit secrets or local `.env` file.")
                 elif "SERP" in err or "serpapi" in err.lower():
-                    st.warning("🔑 **SerpApi key issue** — check that `SERP_API_KEY` is set in your `.env` file.")
+                    st.warning("🔑 **SerpApi key issue** — check that `SERP_API_KEY` is set in your Streamlit secrets or local `.env` file.")
                 elif "WEATHER" in err or "openweathermap" in err.lower():
-                    st.warning("🌤 **Weather API issue** — check that `WEATHER_API_KEY` is set in your `.env` file.")
+                    st.warning("🌤 **Weather API issue** — check that `WEATHER_API_KEY` is set in your Streamlit secrets or local `.env` file.")
                 elif "faiss" in err.lower() or "faiss_index" in err.lower():
                     st.warning(
                         "🗄 **FAISS index missing** — run your index-building script first to create `faiss_index/`. "
