@@ -381,15 +381,6 @@ with st.sidebar:
     # TAB 1 — Info (original sidebar content)
     # _________________________________________
     with tab_info:
-        st.write("**Powered by:**")
-        st.markdown("""
-- 🧠 **Gemini 2.5 Flash** (LLM)
-- 🔍 **SerpApi** (Flights, Hotels & Places)
-- 🌤 **OpenWeatherMap** (Weather)
-- 🗄 **FAISS** (Vector DB / RAG)
-- 🗺 **OpenStreetMap** (Live Maps)
-        """)
-        st.markdown("---")
         st.write("**Try asking:**")
         st.markdown("""
 - *Plan a 3-day trip to Goa*
