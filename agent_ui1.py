@@ -2,6 +2,10 @@ import streamlit as st
 from agent import get_travel_agent, create_memory, clear_tool_cache
 from db import _conn  # direct connection for ad-hoc search queries
 
+from db import DB_PATH
+
+print("STREAMLIT DATABASE:", DB_PATH.resolve())
+
 # _____________________________________________
 # Page config
 # _____________________________________________

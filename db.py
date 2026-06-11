@@ -18,6 +18,7 @@ from pathlib import Path
 DB_PATH = Path(__file__).parent / "travel_agent.db"
 
 
+
 # ── Connection helper ─────────────────────────────────────────────────────────
 @contextmanager
 def _conn():

@@ -13,7 +13,6 @@ from agent import create_memory, get_travel_agent
 from build_vector_db import KNOWLEDGE_BASE_DIR, build_vector_db
 from db import db
 
-
 app = FastAPI(
     title="AI RAG Travel Agent API",
     version="1.0",
