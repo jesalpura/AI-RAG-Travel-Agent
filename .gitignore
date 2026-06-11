@@ -1,0 +1,10 @@
+.env
+.venv/
+_pycache_/
+agent2/
+faiss_index/
+travel_agent.db
+travel_data.txt
+ChatGPT(1).pdf
+logs/
+knowledge_base/
