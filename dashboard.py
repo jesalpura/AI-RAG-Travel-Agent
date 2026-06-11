@@ -18,8 +18,7 @@ st.title("📊 Global Wanderer Analytics")
 # =================================
 
 stats = db.get_stats()
-st.write("DB File Exists:", DB_PATH.exists())
-st.write("DB Path:", DB_PATH)
+
 
 import os
 st.write("DB Size:", os.path.getsize(DB_PATH))
