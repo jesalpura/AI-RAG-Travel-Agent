@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import sqlite3
 from db import db
+from db import DB_PATH
+
 
 st.set_page_config(
     page_title="Travel Agent Dashboard",
