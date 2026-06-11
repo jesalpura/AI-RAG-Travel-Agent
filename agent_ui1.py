@@ -377,6 +377,10 @@ with st.sidebar:
     st.header("✈️ Global Wanderer AI")
     st.markdown("---")
 
+    with st.sidebar:
+        if st.button("Logout"):
+            st.session_state.admin_authenticated = False
+            st.rerun()
     # _____ Tab switcher: Info | Search | Filter ____________________________
 
     tab_info, tab_search, tab_filter = st.tabs(["ℹ️ Info", "🔍 Search", "🎛 Filter"])

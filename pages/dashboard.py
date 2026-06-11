@@ -11,6 +11,34 @@ st.set_page_config(
     layout="wide"
 )
 
+
+# ----------------- ADMIN LOGIN -----------------
+
+if "admin_authenticated" not in st.session_state:
+    st.session_state.admin_authenticated = False
+
+if not st.session_state.admin_authenticated:
+
+    st.title("🔐 Admin Dashboard Login")
+
+    password = st.text_input(
+        "Enter Admin Password",
+        type="password"
+    )
+
+    if st.button("Login"):
+
+        if password == st.secrets["ADMIN_PASSWORD"]:
+            st.session_state.admin_authenticated = True
+            st.rerun()
+        else:
+            st.error("Invalid Password")
+
+    st.stop()
+
+# Dashboard code starts below this line
+st.title("📊 Travel Agent Dashboard")
+
 st.title("📊 Global Wanderer Analytics")
 
 # =================================
