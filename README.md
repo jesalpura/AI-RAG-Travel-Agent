@@ -1,39 +1,100 @@
-# AI-RAG-Travel-Agent
+# ✈️ Global Wanderer AI
 
-## Streamlit app
+An AI-powered Travel Assistant built using **Streamlit, FastAPI, LangChain, Gemini, SQLite, and FAISS RAG**.
 
-```bash
-streamlit run agent_ui1.py
+## 🚀 Features
+
+- 🤖 AI Travel Agent (Gemini 2.5 Flash)
+- 🌤 Real-time Weather Information
+- 🏨 Hotel Recommendations
+- 🍽 Restaurant Discovery
+- ✈ Flight Search
+- 🗺 Tourist Attractions & Maps
+- 🧠 Conversation Memory
+- 📚 RAG with FAISS Vector Database
+- 📊 Analytics Dashboard
+- 🔍 Search & Filter Functionality
+- 💾 SQLite Database Integration
+- ⚡ FastAPI Backend Support
+- 📄 Knowledge Base PDF Upload & Retrieval
+
+## 🛠 Tech Stack
+
+- Streamlit
+- FastAPI
+- LangChain
+- Gemini 2.5 Flash
+- SQLite
+- FAISS
+- HuggingFace Embeddings
+- OpenWeatherMap API
+- SerpAPI
+- OpenStreetMap
+
+## 📂 Project Structure
+
+```text
+project/
+│
+├── agent.py
+├── agent_ui1.py
+├── api.py
+├── db.py
+├── build_vector_db.py
+│
+├── pages/
+│   ├── Dashboard.py
+│   └── Knowledge_Base.py
+│
+├── knowledge_base/
+├── faiss_index/
+└── requirements.txt
+
 ```
+#⚙️ Installation
+-git clone <repo-url>
+-cd project
 
-## FastAPI backend
+-pip install -r requirements.txt
 
-Run the API locally:
+-Create a .env file:
 
-```bash
-uvicorn fastApi:app --reload
-```
+-GOOGLE_API_KEY=your_key
+-SERP_API_KEY=your_key
+-WEATHER_API_KEY=your_key
+#▶ Run Application
+-Streamlit UI
+-streamlit run agent_ui1.py
+-FastAPI Server
+-uvicorn api:app --reload
+#📚 Build Knowledge Base
 
-Useful endpoints:
+-Add PDFs to:
 
-- `GET /health` - API health check
-- `POST /chat` - send a travel-agent chat message
-- `GET /stats` - dashboard metrics from SQLite
-- `POST /upload-pdf` - upload a PDF into `knowledge_base/`
-- `POST /rebuild-db` - rebuild the FAISS vector database in the background
+-knowledge_base/
 
-Example chat request:
+-Then run:
 
-```bash
-curl -X POST http://127.0.0.1:8000/chat ^
-  -H "Content-Type: application/json" ^
-  -d "{\"message\":\"Plan a 2 day trip to Goa\"}"
-```
+-python build_vector_db.py
+#🎯 Example Queries
+-Plan a 3-day trip to Goa
+-Flights from Ahmedabad to Delhi
+-Best hotels in Jaipur
+-Weather in Manali
+-Show attractions in Mumbai on map
+#📊 Dashboard
 
-Set API keys in `.env` locally or Streamlit secrets in deployment:
+-Monitor:
 
-```env
-GROQ_API_KEY=...
-SERP_API_KEY=...
-WEATHER_API_KEY=...
-```
+-Total Conversations
+-Tool Usage Statistics
+-Average Response Time
+-Search & Filter Analytics
+#🌐 Deployment
+
+-Deploy on:
+
+-Streamlit Community Cloud
+## Live Demo
+
+[Launch Application](https://ai-rag-travel-agent-lzzrdms8txtemmi6lppv7c.streamlit.app/)
